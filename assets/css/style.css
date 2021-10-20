@@ -100,17 +100,73 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 75.70%; 
   margin: 0 auto;
 }
 /*=================================
   Header styling starts here
 =================================*/
+header .wrapper {
+  border-bottom: 1.5px solid #2E2E2E;
+  display: flex;
+  justify-content: space-between;
+}
 
+h1 { padding-top: 44px; }
 
+h1 a {
+  display: inline-block;
+  text-indent: -9999px;
+}
 
+h1 img { float: left; }
 
+nav {
+  padding: 53px 0 28px;
+  position: relative;
+  flex-basis: 50%;
+}
 
+.topnav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.topnav a {
+  padding-bottom: 8px;
+  color: #9A9A9A;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: color 800ms, border-bottom 100ms;
+}
+
+.topnav a:hover {
+  border-bottom: 4px solid #8FD0A6;
+  color: #8FD0A6;
+}
+
+.topnav .active { border-bottom: 4px solid #8FD0A6; }
+.topnav li:not(:last-child) { padding-right: 8%; }
+
+.menu {
+  width: 4.4%;
+  margin-left: -2%;
+  display: none; 
+  position: absolute;
+  z-index: 100;
+  top: 9%;
+  left: 96%;
+}
+
+.bar{
+  width: 100%;
+  height: 4.6px;
+  margin-bottom: 5px;
+  border-radius: 1.5px;
+  display: revert;
+  background-color: #8ED0A5;
+  transition: transform 280ms;
+}
 
 /*=================================
   Header styling ends here
@@ -119,14 +175,87 @@ li {
 /*=================================
   main styling starts here
 =================================*/
+.overflowhidden { overflow-y: hidden !important; }
+body { background-color: #1F1F1F; }
 
+.filterscontainer .wrapper {
+  padding: 27px 0 40px;
+  border-bottom: 1.5px solid #2E2E2E;
+}
 
+.tabscontainer { display: flex; }
 
+.tabscontainer a {
+  padding: 7px 13px;
+  color: #9A9A9A;
+  font-size: 14px;
+  text-transform: capitalize;
+  transition: background-color 600ms, color 600ms;
+}
 
+.tabscontainer a:hover {
+  background-color: #8FD0A6;
+  color: #FFF;
+}
 
+.activefilter {
+  background-color: #8FD0A6;
+  color: #FFF;
+}
 
+.imagegallerycontainer {
+  padding-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.imagegallerycontainer .allimage { flex-basis: 24.90%; }
 
+/* ======================filterscontainer styling ends here=================== */
+
+.infocontainer .wrapper {
+  padding: 29px 0;
+  border-bottom: 1px solid #2E2E2E;
+  display: flex;
+  justify-content: space-between;
+}
+
+.infocontainer div { flex-basis: 22.51%; }
+
+.infocontainer p {
+  color: #737373; 
+  font-size: 13px; }
+
+.infocontainer h2 {
+  padding-bottom: 15px;
+  color: #F1F1F1;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+.firstparagraph { padding-bottom: 21px; }
+.recentposts h2 { padding-bottom: 2px; }
+
+.recentposts p {
+  padding: 13px 0;
+  border-bottom: 1px solid #2E2E2E;
+}
+
+.populartabcontainer li { margin: 0 2px 8px; }
+
+.populartabcontainer a {
+  padding: 8px 10px;
+  background-color: #8ED0A5;
+  color: #FFF;
+  font-size: 13px;
+  transition: background-color 800ms;
+}
+
+.populartabcontainer .active { background-color: #C1C1C1; }
+.populartabcontainer a:hover { background-color: #C1C1C1; }
+.flickergallerycontainer li { margin-right: 4px; }
+.flickerimage { margin-bottom: 8px; }
 /*=================================
   main styling ends here
 =================================*/
@@ -134,12 +263,51 @@ li {
 /*=================================
   footer styling starts here
 =================================*/ 
+footer .wrapper {
+  padding: 22px 0;
+  display: flex;
+  justify-content: space-between;
+}
 
+footer span {
+  color: #9A9A9A;
+  font-size: 13px;
+}
 
+.media {
+  margin-right: 5px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #C1C1C1;
+  color: #7C7C7C;
+  font-size: 13px;
+  text-indent: -9999px;
+  transition: background-color 800ms;
+}
 
+.pinterest { padding: 6px 9px; }
+.google { padding: 6px; }
+.twitter,
+.pinterest,
+.linkdin,
+.facebook { padding: 6px 8px; }
 
+.google:after,
+.twitter:after,
+.pinterest:after,
+.linkdin:after,
+.facebook:after {
+  font-family: 'FontAwesome';
+  float: left;
+  text-indent: 0;
+}
 
-
+.google:after { content: '\f0d5'; }
+.twitter:after { content: '\f099'; }
+.pinterest:after { content: "\f231"; }
+.linkdin:after { content: '\f0e1'; }
+.facebook:after { content: '\f082'; }
+.media:hover { background-color: #8ED0A5; }
 
  /*=================================
   footer styling ends here
@@ -147,8 +315,90 @@ li {
 
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
+@media only screen and (max-width: 1024px) {
+  
+  .populartabcontainer li { margin: 0 1px 7px; }
 
+  .populartabcontainer a {
+    padding: 8px 7px;
+    font-size: 10px;
+  }
 
+  .flickergallerycontainer li {
+    width: 23%;
+    margin-right: 0;
+  }
+
+  .flickerimage { margin-bottom: 5px; }
 
 }  
+
+@media only screen and (max-width: 995px) {
+  .infocontainer .wrapper { flex-wrap: wrap; }
+  .tabscontainer a { font-size: 13px; }
+
+  .infocontainer div {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .recentposts {
+    margin: 56px auto;
+    flex-basis: 64%;
+  }
+
+  .infocontainer div:not(:first-child) { margin-top: 56px; }
+}
+
+@media only screen and (max-width: 767px) {
+  .hidecontent { display: none; }
+  .stopscroll { overflow-y: hidden; }
+  .topnav { display: none; }
+  .menu { display: revert; }
+  .bar1change { transform: rotate(45deg) translate(7px,7px);}
+  .bar3change { transform: rotate(-45deg);}
+
+  nav { 
+    padding-top: 72px;
+    flex-basis: 0;
+  }
+
+  .topnavchange {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .topnav a:hover,
+  .topnav .active { border-bottom: 2px solid #8FD0A6; }
+
+  .topnav a { padding: 9px 0 0; }
+  .tabscontainer { justify-content: center; }
+  
+  .tabscontainer a { 
+    padding: 7px 9px;
+    font-size: 7px;
+  }
+
+  .imagegallerycontainer .allimage { flex-basis: 33%; }
+  footer span,
+  .media { font-size: 10px; }
+  .media { margin-right: 1px; }
+}
+@media only screen and (max-width: 480px) {
+  .menu:after { font-size: 26px; }
+
+  .tabscontainer a {
+    padding: 6px 6px;
+    font-size: 5px;
+  }
+
+  .imagegallerycontainer .allimage { flex-basis: 37%; }
+
+  footer .wrapper {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  footer span { padding-bottom: 18px; }
+  
+}
